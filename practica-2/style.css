@@ -1,0 +1,139 @@
+:root {
+  --bright-orange: hsl(31, 77%, 52%);
+  --dark-cyan: hsl(184, 100%, 22%);
+  --very-dark-cyan: hsl(179, 100%, 13%);
+  --transparent-white-paragraphs: hsla(0, 0%, 100%, 0.75);
+  --very-lightgray-background-headings-buttons: hsl(0, 0%, 95%);
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  box-sizing: border-box;
+  background-color: var(--very-lightgray-background-headings-buttons);
+  color: var(--very-lightgray-background-headings-buttons);
+}
+
+.conteiner__principal {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.conteiner__colum {
+  display: flex;
+  align-items: center;
+}
+
+.card__colum {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: space-evenly;
+  width: 170px;
+  height: 270px;
+  padding: 0 30px;
+}
+
+.card__colum--orange {
+  background-color: var(--bright-orange);
+  border-radius: 4px 0 0 4px;
+  transition: 0.5s linear;
+  box-shadow: 0 0px 3px #000000;
+}
+.card__colum--orange:hover {
+  height: 300px;
+  width: 200px;
+  transition: all 1s linear;
+}
+
+.card__colum--blue {
+  background-color: var(--dark-cyan);
+  transition: 0.5s linear;
+  box-shadow: 0 0px 3px #000000;
+}
+
+.card__colum--blue:hover {
+  height: 300px;
+  width: 200px;
+  transition: all 1s linear;
+}
+
+.card__colum--green {
+  background-color: var(--very-dark-cyan);
+  border-radius: 0 4px 4px 0;
+  transition: 0.5s linear;
+  box-shadow: 0 0px 3px #000000;
+}
+
+.card__colum--green:hover {
+  height: 300px;
+  width: 200px;
+  transition: all 1s linear;
+}
+
+.card__imagen {
+  width: 30px;
+  height: 18px;
+}
+
+.card__title {
+  font-size: 2rem;
+  text-transform: uppercase;
+  font-family: "Big Shoulders Display", cursive;
+}
+
+.card__text {
+  font-family: "Lexend Deca", sans-serif;
+  color: var(--transparent-white-paragraphs);
+  margin-bottom: 40px;
+  font-size: 0.8rem;
+  line-height: 1.5rem;
+}
+
+.card__button {
+  padding: 8px 20px;
+  border-radius: 20px;
+  border: none;
+  background-color: var(--very-lightgray-background-headings-buttons);
+  font-family: "Lexend Deca", sans-serif;
+  font-weight: 600;
+  font-size: 0.8rem;
+}
+
+.button__orange {
+  color: var(--bright-orange);
+}
+
+.button__blue {
+  color: var(--dark-cyan);
+}
+
+.button__green {
+  color: var(--very-dark-cyan);
+}
+
+@media only screen and (max-width: 556px) {
+  .conteiner__colum {
+    display: flex;
+    flex-direction: column;
+    height: 650px;
+  }
+
+  .card__colum {
+    padding: 10px 20px;
+  }
+
+  .card__text {
+    margin: 0;
+  }
+
+  .card__colum--green:hover {
+    height: 300px;
+    width: 200px;
+    transition: all 1s linear;
+  }
+}
